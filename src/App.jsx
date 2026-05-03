@@ -1,3 +1,6 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
 import { Routes, Route } from "react-router";
 import Home from "./home.jsx";
 import CV from "./assets/CV.jsx";
@@ -6,6 +9,9 @@ import Work_Experience from "./assets/work_experience.jsx";
 export default function App() {
   return (
     <div>
+
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/CV" element={<CV />} />
@@ -13,4 +19,14 @@ export default function App() {
       </Routes>
     </div>
   );
+}
+
+export function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
 }

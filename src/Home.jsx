@@ -23,6 +23,7 @@ export function Carousel() {
 
   const handleClick = (label) => {
     console.log("Clicked:", label);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
