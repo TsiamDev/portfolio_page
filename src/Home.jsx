@@ -26,19 +26,19 @@ export function Carousel() {
   };
 
   return (
-    <div className="w-full flex justify-center overflow-x-auto gap-6 py-4">
+    <div className="relative w-full flex justify-center overflow-x-auto gap-6 py-4">
       {images.map((img, i) => (
         <button
           key={i}
           onClick={() => img.link && navigate(img.link)}
           className="flex flex-col items-center focus:outline-none"
         >
-          <img
+          <img  
             src={img.src}
             alt={img.label}
             className="w-40 h-40 object-cover rounded-md border border-slate-300 hover:opacity-80 transition"
           />
-          <span className="text-xs text-slate-600 mt-1">
+          <span className="text-xs">
             {img.label}
           </span>
         </button>
@@ -51,27 +51,33 @@ export function Carousel() {
 
 export default function HeroSection() {
   return (
-
+    
     <section 
       className=" 
-      p-10 text-center 
+      text-center 
+      text-white
       rounded-lg 
-      shadow-md 
-      border-20
-      border-width-5
-      border-gray-400 
-      mt-10 
+      border-5
+      border-cyan-100
       mx-auto 
-      max-w-4xl"
-
+      bg-center 
+      bg-repeat
+      "
+      style={{ backgroundImage: "url('src/assets/bg9.jpg')" }}
       >
-      <div>
-        <h1 className="leading-tight">
-          Electronics Engineer
-        </h1>
-        <h2 className="text-lg text-slate-600 mt-0.5">
-          Information Processing and Machine Intelligence
-        </h2>
+      <div className=" text-white !text-white text-4xl font-bold mt-4">
+        <div className="relative">
+          {/* Full-size overlay */}
+          <div className="absolute  inset-0 bg-black/60"></div>
+
+          {/* Text above overlay */}
+          <h1 className="relative z-10 text-white !text-white text-4xl font-bold drop-shadow-lg p-3">
+            Electronics Engineer
+          </h1>
+          <h2 className="text-white !text-white text-4xl font-bold drop-shadow-lg p-3">
+            Information Processing and Machine Intelligence
+          </h2>
+        </div>      
       </div>
 
       <div className="flex items-center justify-center h-64">
@@ -82,79 +88,54 @@ export default function HeroSection() {
         />
       </div>
 
-<div className="flex gap-4 justify-center">
-  <a
-    href="https://www.linkedin.com/in/kostas-tsiamitros"
-    rel="noopener noreferrer"
-    className="px-4 py-2 border border-slate-400 rounded-md hover:bg-slate-100 transition"
-  >
-    LinkedIn
-  </a>
+      <div className=" text-white !text-white text-4xl font-bold mt-4">
+        <div className="relative">
+          {/* Full-size overlay */}
+          <div className="absolute  inset-0 bg-black/60"></div>
 
-  <a
-    href="https://github.com/TsiamDev"
-    rel="noopener noreferrer"
-    className="px-4 py-2 border border-slate-400 rounded-md hover:bg-slate-100 transition"
-  >
-    GitHub
-  </a>
-  </div>
+          <div className="relative flex gap-4 justify-center">
+            <a
+              href="https://www.linkedin.com/in/kostas-tsiamitros"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-slate-400 rounded-md hover:bg-slate-100 transition"
+            >
+              LinkedIn
+            </a>
 
-      <Carousel></Carousel>
+            <a
+              href="https://github.com/TsiamDev"
+              rel="noopener noreferrer"
+              className="px-4 py-2 border border-slate-400 rounded-md hover:bg-slate-100 transition"
+            >
+              GitHub
+            </a>
+          </div>
 
+          <Carousel></Carousel>
+
+          <div className="relative rounded-xl p-6 border border-brand">
+              <h2 className="relative text-white !text-white text-lg font-bold">About Me</h2>
+              <p className="text-left text-xs">
+                Hi, I am Kostas. 
+                <br/>
+                <br/>
+                I'm someone who loves <strong className="text-xl">understanding how things work</strong> — and how they can work better <strong className="text-xl">for people</strong>. 
+                Whether I'm <strong className="text-xl">building something new</strong> or improving what already exists, I focus on <strong className="text-xl">clarity</strong>, 
+                <strong className="text-xl">empathy</strong>, and <strong className="text-xl">purposeful efficient design</strong>.
+                <br/>
+                <br/>
+                I enjoy <strong className="text-xl">working with others</strong>, asking to-the-point questions, and <strong className="text-xl">creating</strong> solutions that feel intuitive and grounded. 
+                My goal is always to make a <strong className="text-xl">positive impact</strong> through thoughtful work and continuous learning.
+                <br/>
+                <br/>
+                In my free time, I enjoy exercising outdoors and going on road trips.
+              </p>
+          </div>
+      </div>
+    </div>  
       
-      <div className="bg-brand-light rounded-xl shadow-md p-6 border border-brand">
-        <h2 className="text-xl font-bold text-brand-dark">About Me</h2>
-        <p className="text-brand-dark/80 mt-2 w-full text-left">
-          Hi, I am Kostas. 
-          <br/>
-          <br/>
-          I'm someone who loves <strong>understanding how things work</strong> — and how they can work better <strong>for people</strong>. 
-          Whether I'm <strong>building something new</strong> or improving what already exists, I focus on <strong>clarity</strong>, <strong>empathy</strong>, and purposeful <strong>efficient design</strong>.
-          <br/>
-          <br/>
-          I enjoy <strong>working with others</strong>, asking to-the-point questions, and <strong>creating</strong> solutions that feel intuitive and grounded. 
-          My goal is always to make a <strong>positive impact</strong> through thoughtful work and continuous learning.
-          <br/>
-          <br/>
-          In my free time, I enjoy exercising outdoors and going on road trips.
-        </p>
-      </div>
-
-{/*
-      <div className="bg-brand-light rounded-xl shadow-md p-6 border border-brand">
-        <h2 className="text-xl font-bold text-brand-dark">Theme Card</h2>
-        <p className="text-brand-dark/80 mt-2">
-          This card uses your custom theme colors.
-        </p>
-      </div>
-
-      <div className="bg-gradient-to-r from-brand to-brand-dark text-white rounded-xl p-6 shadow-lg">
-        <h2 className="text-xl font-semibold">Gradient Card</h2>
-        <p className="mt-2 opacity-90">A more modern card style.</p>
-      </div>
-      <div className="bg-white rounded-xl shadow overflow-hidden">
-      <img src="/image.jpg" className="w-full h-40 object-cover" />
-      <div className="p-6">
-        <h3 className="text-lg font-semibold">Card Title</h3>
-        <p className="text-gray-600 mt-2">Description goes here.</p>
-      </div>
-      <div className="border border-gray-200 rounded-xl p-6">
-        <h3 className="text-lg font-semibold">Minimal Card</h3>
-        <p className="text-gray-600 mt-2">Clean and simple.</p>
-      </div>
-      <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6">
-        <h2 className="text-xl font-semibold text-gray-800">Card Title</h2>
-        <p className="text-gray-600 mt-2 leading-relaxed">
-          A soft, human‑friendly card design using neutral tones and smooth rounding.
-        </p>
-      </div>
-      </div>
-*/}
-
     <Footer />
 
     </section>
-    
   );
 }

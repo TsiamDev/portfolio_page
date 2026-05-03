@@ -5,10 +5,12 @@ import Work_Experience from "./assets/work_experience.jsx";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/CV" element={<CV />} />
-      <Route path="/Work-Experience" element={<Work_Experience />} />
-    </Routes>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/CV" element={<CV />} />
+        <Route path="/Work-Experience" element={<Work_Experience />} />
+      </Routes>
+    </div>
   );
 }
