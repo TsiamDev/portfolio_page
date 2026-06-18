@@ -52,8 +52,11 @@
   }
 }
 
-body {
+body,
+html {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 #root {
@@ -68,6 +71,22 @@ body {
   box-sizing: border-box;
 }
 
+.custom-h {
+  background: #1e293b;
+  /*Dark slate background*/
+  border: 2px solid #38bdf8;
+  /* Light blue border*/
+  border: 6px;
+  /* Slightly rounded corners*/
+  color: #f8fafc;
+  /* White text color*/
+  padding: 12px 20px;
+  /* Space between text and the border*/
+  margin: 10px 0;
+  /* Space outside the border*/
+  font: sans-serif;
+}
+
 h1,
 h2 {
   font-family: var(--heading);
@@ -79,35 +98,49 @@ h1 {
   font-size: 56px;
   letter-spacing: -1.68px;
   margin: 32px 0;
+
   @media (max-width: 1024px) {
     font-size: 36px;
     margin: 20px 0;
   }
 }
+
 h2 {
   font-size: 24px;
   line-height: 118%;
   letter-spacing: -0.24px;
   margin: 0 0 8px;
+
   @media (max-width: 1024px) {
     font-size: 20px;
   }
 }
+
 p {
   margin: 0;
 }
 
-code,
-.counter {
-  font-family: var(--mono);
-  display: inline-flex;
-  border-radius: 4px;
-  color: var(--text-h);
+.container {
+  display: flex;
+  /* puts children side by side */
+  gap: 5px;
+  /* optional spacing */
+  text-align: center;
 }
 
-code {
-  font-size: 15px;
-  line-height: 135%;
-  padding: 4px 8px;
-  background: var(--code-bg);
+.box {
+  flex-shrink: 1;
+  /* each div takes equal width */
+  padding: 15px;
+  background: #eee;
+  text-align: center;
+}
+
+.thumbnail {
+  width: auto;
+  height: 250px;
+  object-fit: cover;
+  /* Crops the image slightly to fit the square perfectly */
+  border-radius: 8px;
+  /* Optional: gives it nice rounded corners */
 }
