@@ -52,6 +52,7 @@ export function PersonalPortfolioCarousel() {
 
   const images = [
     { src: "src/assets/ecology_project.jpg", label: "Ecology-Project", link: "/Ecology-Project" },
+    { src: "src/assets/qa_testing_logo.png", label: "QA-Testing", link: "/QA-Testing" },
   ];
 
   const handleClick = (label) => {
@@ -65,12 +66,12 @@ export function PersonalPortfolioCarousel() {
         <button
           key={i}
           onClick={() => img.link && navigate(img.link)}
-          className="flex flex-col items-center focus:outline-none"
+          className=" width: 50px; height: 50px; padding: 10px 20px;"
         >
           <img
             src={img.src}
             alt={img.label}
-            className="w-40 h-40 flex flex-col-3 object-cover rounded-md border border-slate-300 hover:opacity-80 transition"
+            className="thumbnail object-cover rounded-md border border-slate-300 hover:opacity-80 transition"
           />
           <span className="text-s">
             {img.label}
@@ -173,7 +174,7 @@ export default function HeroSection() {
             </a>
           </div>
 
-          <Carousel></Carousel>
+          <Carousel />
 
           <div className=" text-white !text-white text-4xl font-bold mt-4">
             <div className="relative">
