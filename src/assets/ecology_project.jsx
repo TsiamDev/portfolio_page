@@ -13,7 +13,7 @@ export default function Ecology_Project() {
       bg-center 
       bg-repeat
       "
-      style={{ backgroundImage: "url('src/assets/bg9.jpg')" }}
+      style={{ backgroundImage: "url('src/assets/bg9.webp')" }}
     >
       <h2 style={{
         backgroundColor: '#1e293b', // Dark slate background
@@ -27,7 +27,7 @@ export default function Ecology_Project() {
         Ecology Project
       </h2>
 
-      <img src="src/assets/ecology_project.jpg" alt="Ecology Project" style={{ display: 'block', margin: '0 auto' }} className="thumbnail w-100 h-auto rounded-full border-3 border-gray-300" />
+      <img src="src/assets/ecology_project.webp" alt="Ecology Project" style={{ display: 'block', margin: '0 auto' }} className="thumbnail w-100 h-auto rounded-full border-3 border-gray-300" />
 
 
       <h2 style={{
@@ -144,12 +144,12 @@ export function PersonalPortfolioCarousel() {
   const navigate = useNavigate();
 
   const images = [
-    { src: "src/assets/plant_isolated_01.jpg", label: "sample_image_01" },
-    { src: "src/assets/plant_isolated_02.jpg", label: "sample_image_02" },
-    { src: "src/assets/plant_isolated_03.jpg", label: "sample_image_03" },
-    { src: "src/assets/plant_isolated_11.jpg", label: "sample_image_11" },
-    { src: "src/assets/plant_isolated_12.jpg", label: "sample_image_12" },
-    { src: "src/assets/plant_isolated_13.jpg", label: "sample_image_13" },
+    { src: "src/assets/plant_isolated_01.webp", label: "sample_image_01" },
+    { src: "src/assets/plant_isolated_02.webp", label: "sample_image_02" },
+    { src: "src/assets/plant_isolated_03.webp", label: "sample_image_03" },
+    { src: "src/assets/plant_isolated_11.webp", label: "sample_image_11" },
+    { src: "src/assets/plant_isolated_12.webp", label: "sample_image_12" },
+    { src: "src/assets/plant_isolated_13.webp", label: "sample_image_13" },
   ];
 
   /*

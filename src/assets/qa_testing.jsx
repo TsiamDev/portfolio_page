@@ -12,7 +12,7 @@ export default function QA_Testing() {
         <section
             className="text-center text-white rounded-lg border-5
         border-cyan-100 mx-auto bg-center bg-repeat"
-            style={{ backgroundImage: "url('src/assets/bg9.jpg')" }}
+            style={{ backgroundImage: "url('src/assets/bg9.webp')" }}
         >
             <h2 style={{
                 backgroundColor: '#1e293b', // Dark slate background

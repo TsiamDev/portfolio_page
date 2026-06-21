@@ -16,8 +16,8 @@ export function Carousel() {
   const navigate = useNavigate();
 
   const images = [
-    { src: "src/assets/work_experience.jpg", label: "Work Experience", link: "/Work-Experience" },
-    { src: "src/assets/CV.jpg", label: "Resume", link: "/CV" },
+    { src: "src/assets/work_experience.webp", label: "Work Experience", link: "/Work-Experience" },
+    { src: "src/assets/CV.webp", label: "Resume", link: "/CV" },
   ];
 
   const handleClick = (label) => {
@@ -51,8 +51,8 @@ export function PersonalPortfolioCarousel() {
   const navigate = useNavigate();
 
   const images = [
-    { src: "src/assets/ecology_project.jpg", label: "Ecology-Project", link: "/Ecology-Project" },
-    { src: "src/assets/qa_testing_logo.png", label: "QA-Testing", link: "/QA-Testing" },
+    { src: "src/assets/ecology_project.webp", label: "Ecology-Project", link: "/Ecology-Project" },
+    { src: "src/assets/qa_testing_logo.webp", label: "QA-Testing", link: "/QA-Testing" },
   ];
 
   const handleClick = (label) => {
@@ -96,7 +96,7 @@ export default function HeroSection() {
       bg-center 
       bg-repeat
       "
-      style={{ backgroundImage: "url('src/assets/bg9.jpg')" }}
+      style={{ backgroundImage: "url('src/assets/bg9.webp')" }}
     >
       <div className=" text-white !text-white text-4xl font-bold mt-4">
         <div className="relative">
@@ -118,7 +118,7 @@ export default function HeroSection() {
 
       <div className="flex items-center justify-center h-64">
         <img
-          src="src/assets/icon_me.jpg"
+          src="src/assets/icon_me.webp"
           alt="example"
           className="w-50 h-50 rounded-full object-cover border-4 border-gray-300 shadow-lg"
         />
